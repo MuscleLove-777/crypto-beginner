@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>クリプト入門ナビ</title>
+    <link>https://musclelove-777.github.io/crypto-beginner</link>
+    <description>仮想通貨・DeFi・NFTを初心者目線で徹底解説。リスク管理から実践トレードまで、失敗しない暗号資産の始め方</description>
+    <language>ja</language>
+    <lastBuildDate>Sun, 29 Mar 2026 15:15:00 +0900</lastBuildDate>
+    <atom:link href="https://musclelove-777.github.io/crypto-beginner/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>DeFiステーキング始め方【初心者必見】稼ぐ仕組みとリスク対策</title>
+      <link>https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-hajimekata-shoshinsha.html</link>
+      <guid>https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-hajimekata-shoshinsha.html</guid>
+      <description></description>
+      <category>DeFi入門</category>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0900</pubDate>
+    </item>
+  </channel>
+</rss>
