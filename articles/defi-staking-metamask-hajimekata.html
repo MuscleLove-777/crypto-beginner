@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>DeFiステーキング×MetaMask：初心者向け始め方徹底解説 | クリプト入門ナビ</title>
+
+    
+    <meta name="description" content="">
+    <meta name="author" content="クリプト入門ナビ">
+    <link rel="canonical" href="https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-metamask-hajimekata.html">
+
+    
+    <meta property="og:site_name" content="クリプト入門ナビ">
+    <meta property="og:title" content="DeFiステーキング×MetaMask：初心者向け始め方徹底解説">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-metamask-hajimekata.html">
+    <meta property="og:locale" content="ja_JP">
+
+    
+    <meta property="og:image" content="">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DeFiステーキング×MetaMask：初心者向け始め方徹底解説">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    
+    <link rel="alternate" type="application/rss+xml" title="クリプト入門ナビ" href="https://musclelove-777.github.io/crypto-beginner/feed.xml">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSFVD34MKK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CSFVD34MKK');
+    </script>
+    
+
+    
+    
+
+    
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "DeFiステーキング×MetaMask：初心者向け始め方徹底解説",
+    "description": "",
+    "datePublished": "2026-04-01",
+    "dateModified": "2026-04-01",
+    "author": {"@type": "Organization", "name": "クリプト入門ナビ"},
+    "publisher": {"@type": "Organization", "name": "クリプト入門ナビ"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-metamask-hajimekata.html"}
+    
+    ,"keywords": "DeFi, ステーキング, MetaMask, 暗号資産, 初心者"
+}
+</script>
+
+
+    <style>
+        /* =============================================
+           CSS変数: テーマカラー（config.THEMEから注入）
+           ============================================= */
+        :root {
+            --color-dark-bg: #0d0d0d;
+            --color-dark-surface: #16213e;
+            --color-primary: #b8860b;
+            --color-accent: #f5a623;
+            --color-text-dark: #eeeeee;
+            --color-text-muted-dark: #a0aec0;
+
+            --color-light-bg: #fdf8ef;
+            --color-light-surface: #ffffff;
+            --color-text-light: #1a202c;
+            --color-text-muted-light: #64748b;
+
+            --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            --max-width: 1280px;
+            --sidebar-width: 320px;
+            --header-height: 64px;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-pill: 9999px;
+
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        [data-theme="dark"] {
+            --bg: var(--color-dark-bg);
+            --surface: var(--color-dark-surface);
+            --text: var(--color-text-dark);
+            --text-muted: var(--color-text-muted-dark);
+            --border: rgba(255,255,255,0.08);
+            --code-bg: rgba(255,255,255,0.06);
+        }
+
+        [data-theme="light"] {
+            --bg: var(--color-light-bg);
+            --surface: var(--color-light-surface);
+            --text: var(--color-text-light);
+            --text-muted: var(--color-text-muted-light);
+            --border: rgba(0,0,0,0.08);
+            --code-bg: #f1f5f9;
+        }
+
+        @media (prefers-color-scheme: light) {
+            [data-theme="auto"] {
+                --bg: var(--color-light-bg);
+                --surface: var(--color-light-surface);
+                --text: var(--color-text-light);
+                --text-muted: var(--color-text-muted-light);
+                --border: rgba(0,0,0,0.08);
+                --code-bg: #f1f5f9;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            [data-theme="auto"] {
+                --bg: var(--color-dark-bg);
+                --surface: var(--color-dark-surface);
+                --text: var(--color-text-dark);
+                --text-muted: var(--color-text-muted-dark);
+                --border: rgba(255,255,255,0.08);
+                --code-bg: rgba(255,255,255,0.06);
+            }
+        }
+
+        /* =============================================
+           リセット・基本
+           ============================================= */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+        }
+
+        /* =============================================
+           流体タイポグラフィ
+           ============================================= */
+        h1 { font-size: clamp(1.75rem, 2.5vw + 1rem, 2.5rem); font-weight: 800; line-height: 1.3; }
+        h2 { font-size: clamp(1.35rem, 1.8vw + 0.8rem, 1.75rem); font-weight: 700; line-height: 1.35; }
+        h3 { font-size: clamp(1.1rem, 1.2vw + 0.6rem, 1.35rem); font-weight: 600; line-height: 1.4; }
+        h4 { font-size: 1.1rem; font-weight: 600; }
+        p { margin-bottom: 1em; }
+
+        a { color: var(--color-accent); text-decoration: none; transition: color 0.2s, opacity 0.2s; }
+        a:hover { opacity: 0.85; text-decoration: underline; }
+        img { max-width: 100%; height: auto; border-radius: var(--radius-sm); }
+
+        code {
+            font-family: var(--font-mono);
+            background: var(--code-bg);
+            padding: 0.15em 0.4em;
+            border-radius: 4px;
+            font-size: 0.88em;
+        }
+        pre {
+            background: var(--code-bg);
+            padding: 1.25em;
+            border-radius: var(--radius-sm);
+            overflow-x: auto;
+            margin-bottom: 1.5em;
+            border: 1px solid var(--border);
+        }
+        pre code { background: none; padding: 0; }
+
+        blockquote {
+            border-left: 4px solid var(--color-accent);
+            padding: 0.75em 1.25em;
+            margin: 1.5em 0;
+            color: var(--text-muted);
+            background: var(--code-bg);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1.5em; }
+        th, td { padding: 0.75em 1em; border: 1px solid var(--border); text-align: left; }
+        th { background: var(--code-bg); font-weight: 600; }
+
+        /* =============================================
+           レイアウト
+           ============================================= */
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+        .layout-main { display: flex; gap: 2.5rem; margin-top: 2rem; margin-bottom: 3rem; }
+        .content-area { flex: 1; min-width: 0; }
+        .sidebar { width: var(--sidebar-width); flex-shrink: 0; }
+
+        @media (max-width: 900px) {
+            .layout-main { flex-direction: column; }
+            .sidebar { width: 100%; }
+        }
+
+        /* =============================================
+           ヘッダー
+           ============================================= */
+        .site-header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--header-height);
+        }
+        .site-logo a {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .site-logo a:hover { opacity: 1; text-decoration: none; }
+        .header-right { display: flex; align-items: center; gap: 1.5rem; }
+        .site-nav { display: flex; align-items: center; gap: 1.25rem; }
+        .site-nav a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .site-nav a:hover { color: var(--color-accent); text-decoration: none; }
+
+        /* ダークモード切替ボタン */
+        .theme-toggle {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            padding: 6px 10px;
+            font-size: 1.1rem;
+            line-height: 1;
+            color: var(--text);
+            transition: background 0.2s;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme-toggle:hover { background: var(--color-primary); }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            margin: 5px auto;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .site-nav {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0; right: 0;
+                background: var(--surface);
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+            }
+            .site-nav.open { display: flex; }
+            .site-nav a { padding: 10px 0; min-height: 44px; display: flex; align-items: center; }
+        }
+
+        /* =============================================
+           Bentoカードグリッド
+           ============================================= */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .card:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
+
+        .card-thumb {
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .card-thumb-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: rgba(255,255,255,0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .card-body { padding: 1.25rem 1.5rem; }
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .card-title a { color: var(--text); }
+        .card-title a:hover { color: var(--color-accent); text-decoration: none; }
+
+        .card-meta {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .card-excerpt {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+
+        /* モバイル: カード横型 */
+        @media (max-width: 640px) {
+            .card-grid { grid-template-columns: 1fr; }
+            .card { display: flex; flex-direction: row; }
+            .card-thumb { aspect-ratio: 1 / 1; width: 120px; min-height: 120px; flex-shrink: 0; }
+            .card-body { padding: 1rem; flex: 1; min-width: 0; }
+            .card-title { font-size: 0.95rem; }
+            .card-excerpt { -webkit-line-clamp: 2; }
+        }
+
+        /* =============================================
+           タグ（ピル型バッジ）
+           ============================================= */
+        .tag {
+            display: inline-block;
+            padding: 0.2em 0.65em;
+            font-size: 0.75rem;
+            background: var(--code-bg);
+            color: var(--text-muted);
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        .tag:hover { background: var(--color-accent); color: #fff; text-decoration: none; }
+
+        .category-badge {
+            display: inline-block;
+            padding: 0.2em 0.7em;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+        }
+        .category-badge:hover { opacity: 0.85; color: #fff; text-decoration: none; }
+
+        .reading-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3em;
+            padding: 0.2em 0.7em;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: rgba(233,69,96,0.12);
+            color: var(--color-accent);
+            border-radius: var(--radius-pill);
+        }
+
+        /* =============================================
+           パンくず・記事本文・目次
+           ============================================= */
+        .breadcrumb {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.85rem; color: var(--text-muted);
+            margin-bottom: 1.5rem; flex-wrap: wrap;
+        }
+        .breadcrumb a { color: var(--text-muted); }
+        .breadcrumb a:hover { color: var(--color-accent); }
+        .breadcrumb-sep { color: var(--text-muted); opacity: 0.5; }
+
+        .article-header { margin-bottom: 2rem; }
+        .article-title {
+            font-size: clamp(1.5rem, 3vw + 0.5rem, 2.2rem);
+            font-weight: 800; line-height: 1.3; margin-bottom: 0.75rem;
+        }
+        .article-meta {
+            display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+            color: var(--text-muted); font-size: 0.88rem;
+        }
+
+        .article-body { font-size: 1rem; line-height: 1.9; }
+        .article-body h2 { margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.4em; border-bottom: 2px solid var(--color-accent); }
+        .article-body h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
+        .article-body ul, .article-body ol { margin: 1em 0; padding-left: 1.5em; }
+        .article-body li { margin-bottom: 0.4em; }
+        /* コンテンツ画像（記事内挿入画像） */
+        .article-body img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article-body img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+        .article-body p > img {
+            margin: 2.5rem auto;
+        }
+        /* 画像を囲むfigure要素用 */
+        .article-body figure {
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+        .article-body figcaption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        /* 画像のレスポンシブ調整 */
+        @media (max-width: 768px) {
+            .article-body img {
+                margin: 1.5rem auto;
+                border-radius: var(--radius-sm);
+            }
+        }
+
+        .toc-container {
+            background: var(--code-bg); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-bottom: 2rem;
+        }
+        .toc-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-accent); }
+        .toc-container ul { list-style: none; padding-left: 0; margin: 0; }
+        .toc-container li { margin-bottom: 0.3em; }
+        .toc-container ul ul { padding-left: 1.25em; }
+        .toc-container a { color: var(--text-muted); font-size: 0.88rem; }
+        .toc-container a:hover { color: var(--color-accent); }
+
+        /* =============================================
+           SNSシェア・ページネーション
+           ============================================= */
+        .share-buttons { display: flex; gap: 0.6rem; margin: 2rem 0; flex-wrap: wrap; }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.5em 1em; border-radius: var(--radius-sm);
+            font-size: 0.82rem; font-weight: 600; color: #fff;
+            text-decoration: none; transition: opacity 0.2s; min-height: 44px;
+        }
+        .share-btn:hover { opacity: 0.85; color: #fff; text-decoration: none; }
+        .share-btn-twitter { background: #1DA1F2; }
+        .share-btn-facebook { background: #1877F2; }
+        .share-btn-hatena { background: #00A4DE; }
+        .share-btn-line { background: #06C755; }
+
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin: 2.5rem 0; }
+        .pagination a, .pagination span {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 44px; height: 44px; padding: 0 0.5em;
+            border-radius: var(--radius-sm); font-size: 0.9rem; font-weight: 500;
+            text-decoration: none; transition: background 0.2s, color 0.2s;
+        }
+        .pagination a { color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); }
+        .pagination a:hover { background: var(--color-accent); color: #fff; border-color: var(--color-accent); text-decoration: none; }
+        .pagination .current { background: var(--color-accent); color: #fff; border: 1px solid var(--color-accent); }
+
+        /* =============================================
+           サイドバー
+           ============================================= */
+        .sidebar-widget {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.5rem;
+        }
+        .sidebar-widget-title {
+            font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem;
+            padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent);
+        }
+        .sidebar-category-list { list-style: none; padding: 0; }
+        .sidebar-category-list li { margin-bottom: 0.3rem; }
+        .sidebar-category-list a {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.5rem 0; color: var(--text-muted); font-size: 0.88rem;
+            border-bottom: 1px solid var(--border); text-decoration: none; min-height: 44px;
+        }
+        .sidebar-category-list a:hover { color: var(--color-accent); text-decoration: none; }
+        .sidebar-category-count {
+            font-size: 0.78rem; background: var(--code-bg);
+            padding: 0.15em 0.5em; border-radius: var(--radius-pill);
+        }
+
+        .adsense-slot { margin: 1.5rem 0; text-align: center; }
+
+        /* =============================================
+           フッター
+           ============================================= */
+        .site-footer {
+            background: var(--surface); border-top: 1px solid var(--border);
+            padding: 2.5rem 0; margin-top: 3rem;
+        }
+        .footer-inner {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; flex-wrap: wrap; gap: 2rem;
+        }
+        .footer-section h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 0.3rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.85rem; }
+        .footer-links a:hover { color: var(--color-accent); }
+        .footer-copyright {
+            text-align: center; margin-top: 2rem; padding-top: 1.5rem;
+            border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-muted);
+        }
+
+        /* =============================================
+           ユーティリティ
+           ============================================= */
+        .text-center { text-align: center; }
+        .text-muted { color: var(--text-muted); }
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        .mt-3 { margin-top: 1.5rem; }
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .empty-state { text-align: center; padding: 4rem 1rem; color: var(--text-muted); }
+        .empty-state p { font-size: 1.1rem; }
+
+        /* =============================================
+           ヒーロー画像（CSS生成・コスト0）
+           ============================================= */
+        .article-hero {
+            position: relative;
+            aspect-ratio: 21 / 9;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .article-hero-emoji {
+            font-size: clamp(4rem, 8vw, 8rem);
+            z-index: 2;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+            animation: hero-float 3s ease-in-out infinite;
+        }
+        @keyframes hero-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .article-hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 60% 80%, rgba(255,255,255,0.06) 0%, transparent 40%);
+            z-index: 1;
+        }
+        .article-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+
+        /* セクション見出しの絵文字装飾 */
+        .article-body h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* 強調ボックス（blockquote内の💡⚠️✅） */
+        .article-body blockquote {
+            position: relative;
+            padding: 1rem 1.5rem;
+            margin: 1.5em 0;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+        }
+        .article-body blockquote p { margin-bottom: 0.3em; }
+        .article-body blockquote p:last-child { margin-bottom: 0; }
+
+        /* インデックスカードのサムネイルにも絵文字 */
+        .card-thumb-emoji {
+            font-size: 3rem;
+            z-index: 2;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+        }
+
+        /* テーブル装飾強化 */
+        .article-body table {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .article-body th {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: #fff;
+            font-weight: 600;
+        }
+        .article-body tr:nth-child(even) td {
+            background: var(--code-bg);
+        }
+
+        /* 番号付きリスト装飾 */
+        .article-body ol {
+            counter-reset: step-counter;
+            list-style: none;
+            padding-left: 0;
+        }
+        .article-body ol > li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1rem;
+        }
+        .article-body ol > li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="site-logo">
+                <a href="https://musclelove-777.github.io/crypto-beginner/index.html">クリプト入門ナビ</a>
+            </div>
+
+            <div class="header-right">
+                <nav class="site-nav" id="siteNav">
+                    <a href="https://musclelove-777.github.io/crypto-beginner/index.html">ホーム</a>
+                    
+                    <a href="https://musclelove-777.github.io/crypto-beginner/feed.xml">RSS</a>
+                </nav>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="テーマ切替" title="ダーク/ライト切替">
+                    <span id="themeIcon">&#9790;</span>
+                </button>
+
+                <button class="menu-toggle" aria-label="メニュー" onclick="document.getElementById('siteNav').classList.toggle('open')">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="container">
+        
+<div class="layout-main">
+    <div class="content-area">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <a href="https://musclelove-777.github.io/crypto-beginner/index.html">ホーム</a>
+            <span class="breadcrumb-sep">/</span>
+            
+            <a href="https://musclelove-777.github.io/crypto-beginner/category/DeFi入門.html">DeFi入門</a>
+            <span class="breadcrumb-sep">/</span>
+            
+            <span>DeFiステーキング×MetaMask：初心者向け始め方徹底解説</span>
+        </nav>
+
+        <article>
+            
+            
+            <div class="article-hero" style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent));">
+                <span class="article-hero-emoji">📝</span>
+                <div class="article-hero-pattern"></div>
+            </div>
+            
+
+            <header class="article-header">
+                <h1 class="article-title">DeFiステーキング×MetaMask：初心者向け始め方徹底解説</h1>
+                <div class="article-meta">
+                    <span>2026-04-01</span>
+                    <span class="reading-time">3分で読める</span>
+                    <a href="https://musclelove-777.github.io/crypto-beginner/category/DeFi入門.html" class="category-badge">DeFi入門</a>
+                </div>
+                <div class="card-tags mt-1"><span class="tag">DeFi</span><span class="tag">ステーキング</span><span class="tag">MetaMask</span><span class="tag">暗号資産</span><span class="tag">初心者</span></div>
+            </header>
+
+            
+
+            
+            <details class="toc-container" open>
+                <summary class="toc-title" style="cursor:pointer;user-select:none;">目次</summary>
+                <div class="toc"><span class="toctitle">目次</span><ul>
+<li><a href="#_1">この記事の結論</a></li>
+<li><a href="#_2">基礎知識</a><ul>
+<li><a href="#defi">DeFi（分散型金融 = 銀行を通さず直接お金のやり取りができる仕組み）</a></li>
+<li><a href="#_3">ステーキング（保有する仮想通貨をブロックチェーンネットワークに預け入れ、そのネットワークの維持に貢献することで報酬を得る仕組み）</a></li>
+<li><a href="#metamask-nftweb">MetaMask（メタマスク = イーサリアム系の仮想通貨やNFTを管理・送受信できる、Webブラウザにインストールするタイプのデジタルお財布）</a></li>
+</ul>
+</li>
+<li><a href="#_4">具体的な手順・やり方</a><ul>
+<li><a href="#1">ステップ1: 金融庁登録済みの国内取引所で口座開設・仮想通貨を購入</a></li>
+<li><a href="#2-metamask">ステップ2: MetaMaskをインストール・設定</a></li>
+<li><a href="#3-metamask">ステップ3: MetaMaskに仮想通貨を送金</a></li>
+<li><a href="#4-defi">ステップ4: DeFiプラットフォームに接続し、ステーキング</a></li>
+</ul>
+</li>
+<li><a href="#_5">メリット・デメリット比較</a></li>
+<li><a href="#_6">リスクと注意点</a><ul>
+<li><a href="#1_1">1. 価格変動リスク</a></li>
+<li><a href="#2">2. ハッキング・詐欺リスク</a></li>
+<li><a href="#3">3. 規制リスク</a></li>
+<li><a href="#4">4. セキュリティ対策</a></li>
+<li><a href="#_7">投資額は余裕資金の範囲内で</a></li>
+</ul>
+</li>
+<li><a href="#_8">まとめ：初心者が今すぐやるべきこと</a></li>
+</ul>
+</div>
+
+            </details>
+            
+
+            <div class="article-body"><h1 id="defimetamask">DeFiステーキング×MetaMask：初心者向け始め方徹底解説</h1>
+<h2 id="_1">この記事の結論</h2>
+<ul>
+<li><strong>結論1（最も重要なポイント）</strong>: DeFiステーキングは、保有する仮想通貨（暗号資産）を預けて報酬を得る魅力的な手段ですが、価格変動や技術的なリスクを理解し、自己責任で余裕資金の範囲内で行うことが非常に重要です。</li>
+<li><strong>結論2</strong>: MetaMask（メタマスク）はDeFi（分散型金融）の世界へアクセスするための必須ツールです。シードフレーズ（リカバリーフレーズ）の厳重な管理と、セキュリティ対策の徹底が何よりも重要です。</li>
+<li><strong>結論3</strong>: 初めてDeFiステーキングに挑戦する際は、まず金融庁登録済みの国内取引所で安全に仮想通貨を購入し、少額からテストする「スモールスタート」を強く推奨します。</li>
+</ul>
+<p><img alt="## 基礎知識" src="../images/section_images/defi-staking-metamask-hajimekata_section_0.png" /></p>
+<h2 id="_2">基礎知識</h2>
+<p>暗号資産（仮想通貨）の世界では、まだ新しい概念が多くあります。DeFiステーキングとMetaMaskについて、初心者の方にも分かりやすく解説していきましょう。</p>
+<h3 id="defi">DeFi（分散型金融 = 銀行を通さず直接お金のやり取りができる仕組み）</h3>
+<p>DeFiとは、「Decentralized Finance」の略で、ブロックチェーン技術（鎖のようにつながった取引記録をみんなで共有・監視する技術。改ざんが非常に難しいのが特徴）を活用し、特定の銀行や企業などの中央管理者を通さずに、個人間で金融サービスを提供する仕組み全般を指します。従来の金融システム（中央集権型金融 = CeFi）では銀行が預金や融資、送金などを仲介しますが、DeFiでは「スマートコントラクト（特定の条件が満たされたら自動的に契約を実行するプログラム）」という技術によって、これらの金融取引が自動的に実行されます。</p>
+<h3 id="_3">ステーキング（保有する仮想通貨をブロックチェーンネットワークに預け入れ、そのネットワークの維持に貢献することで報酬を得る仕組み）</h3>
+<p>ステーキングとは、特定の暗号資産を一定期間ロック（預け入れ）することで、そのブロックチェーンネットワークの安全な運営や取引の検証に貢献し、その対価として新たな暗号資産の報酬を得る行為です。これは「プルーフ・オブ・ステーク（Proof of Stake = PoS）」という仕組みを採用しているブロックチェーンで利用できます。銀行預金の利息に似ていますが、一般的にDeFiステーキングの利回りは伝統的な金融商品よりも高くなる可能性があります。ただし、価格変動リスクも伴います。</p>
+<h3 id="metamask-nftweb">MetaMask（メタマスク = イーサリアム系の仮想通貨やNFTを管理・送受信できる、Webブラウザにインストールするタイプのデジタルお財布）</h3>
+<p>MetaMaskは、イーサリアム（Ethereum）ブロックチェーンとその互換性のあるネットワーク（例: Polygon、Binance Smart Chainなど）上の暗号資産やNFT（非代替性トークン = 世界に一つだけのデジタルデータ）を管理するための「ソフトウェアウォレット」です。Google ChromeなどのWebブラウザの拡張機能として利用でき、DeFiプロトコル（DeFiサービス）と連携するためのゲートウェイ（入り口）となります。MetaMaskなしには、多くのDeFiサービスを利用することはできません。シードフレーズ（ウォレットを復元するための12個の英単語）の管理が最も重要です。</p>
+<p><img alt="## 具体的な手順・やり方" src="../images/section_images/defi-staking-metamask-hajimekata_section_1.png" /></p>
+<h2 id="_4">具体的な手順・やり方</h2>
+<p>DeFiステーキングを始めるための具体的なステップを解説します。初心者の方は焦らず、一つずつ確認しながら進めていきましょう。</p>
+<h3 id="1">ステップ1: 金融庁登録済みの国内取引所で口座開設・仮想通貨を購入</h3>
+<p>DeFiステーキングを始めるには、まず仮想通貨が必要です。日本円を仮想通貨に交換するため、国内の暗号資産取引所の口座を開設しましょう。<strong>日本の金融庁に登録されている取引所を選ぶことが重要です。</strong></p>
+<ul>
+<li><strong>おすすめの国内取引所（例）</strong>: Coincheck（コインチェック）、bitFlyer（ビットフライヤー）、Zaif（ザイフ）など。</li>
+<li><strong>開設手順</strong>: 各取引所の公式サイトにアクセスし、「口座開設」ボタンをクリックします。メールアドレス登録、本人確認書類の提出（運転免許証、マイナンバーカードなど）、顔写真・動画撮影などが必要です。</li>
+<li><strong>所要時間</strong>: 口座開設の申請自体は10～15分程度ですが、審査に数日～1週間程度かかる場合があります。</li>
+<li><strong>購入する仮想通貨</strong>: DeFiで広く利用されるイーサリアム（ETH）や、手数料が安く利用しやすいPolygon（MATIC）などが候補です。少額から購入しましょう。</li>
+<li><strong>手数料</strong>: 日本円の入金手数料は無料の場合が多いですが、仮想通貨の購入時には「スプレッド（買値と売値の差額）」や「取引手数料」が発生します。販売所形式は手数料が高め、取引所形式は安価な傾向があります。</li>
+</ul>
+<p><strong>詳細はこちらの記事も参照してください: {{internal_link:仮想通貨取引所の選び方と開設方法}}</strong></p>
+<h3 id="2-metamask">ステップ2: MetaMaskをインストール・設定</h3>
+<p>次に、DeFiにアクセスするためのデジタルウォレット「MetaMask」を準備します。</p>
+<ol>
+<li><strong>MetaMaskの公式サイトにアクセス</strong>: Google Chromeなど、普段お使いのブラウザでMetaMaskの公式サイト（<code>https://metamask.io/</code>）にアクセスし、「Download for Chrome」などのボタンをクリックします。</li>
+<li><strong>ブラウザ拡張機能として追加</strong>: 画面の指示に従い、MetaMaskをブラウザの拡張機能として追加します。</li>
+<li><strong>ウォレットの作成</strong>: 「ウォレットを作成」を選択します。パスワードを設定し、MetaMaskへのログインパスワードを決定します。</li>
+<li><strong>シードフレーズ（リカバリーフレーズ）の記録と保管</strong>: これがMetaMaskで最も重要なステップです。12個の英単語で構成されるシードフレーズが表示されます。<strong>このフレーズは、ウォレットを復元するための「究極の鍵」です。誰にも見せず、デジタルデータとして保存せず、必ず紙に書き留めて、金庫などオフラインの安全な場所に複数保管してください。</strong> これを失うと、資産は永遠に取り出せなくなります。また、誰かに知られると、資産を盗まれてしまいます。</li>
+<li><strong>シードフレーズの確認</strong>: 正しく記録したか確認するため、MetaMaskが特定の単語の入力を求めてきます。正確に入力しましょう。</li>
+</ol>
+<h3 id="3-metamask">ステップ3: MetaMaskに仮想通貨を送金</h3>
+<p>国内取引所で購入した仮想通貨をMetaMaskに送金します。</p>
+<ol>
+<li><strong>MetaMaskのアドレスを確認</strong>: MetaMaskを起動し、画面上部に表示される「0x...」から始まる文字列があなたのウォレットアドレスです。クリックするとコピーできます。</li>
+<li><strong>国内取引所から送金手続き</strong>: 利用している国内取引所の送金（出金）ページに移動し、送金先アドレスとしてコピーしたMetaMaskのアドレスを貼り付けます。</li>
+<li><strong>送金ネットワークの選択</strong>: イーサリアム（ETH）を送る場合は「Ethereumメインネット」、Polygon（MATIC）を送る場合は「Polygonネットワーク」など、<strong>送金する仮想通貨と同じネットワークを選択することが絶対条件です。</strong> 異なるネットワークを選択すると、資産が失われる可能性があります。</li>
+<li><strong>送金額の入力</strong>: 少額（例: 0.01ETHなど）でテスト送金し、無事に着金することを確認してから、残りの金額を送金することをおすすめします。</li>
+<li><strong>手数料（ガス代）</strong>: 送金にはネットワーク手数料（ガス代）がかかります。ネットワークの混雑状況によって変動します。</li>
+</ol>
+<h3 id="4-defi">ステップ4: DeFiプラットフォームに接続し、ステーキング</h3>
+<p>MetaMaskに仮想通貨が入金されたら、いよいよDeFiプラットフォームでステーキングを行います。</p>
+<ol>
+<li><strong>ステーキングしたいDeFiプラットフォームを選ぶ</strong>: 例えば、Lido（リド）のようなリキッドステーキングプロトコルや、AAVE（アーベ）のようなレンディングプロトコルなどがあります。それぞれの公式サイトにアクセスします。<ul>
+<li><strong>注意</strong>: 無数のDeFiプロトコルが存在しますが、セキュリティ監査が十分に行われ、実績のある信頼性の高いプロトコルを選ぶようにしましょう。詐欺的なプロジェクトも存在します。</li>
+</ul>
+</li>
+<li><strong>MetaMaskを接続</strong>: プラットフォームの右上などにある「Connect Wallet（ウォレットを接続）」ボタンをクリックし、MetaMaskを選択して接続を承認します。</li>
+<li><strong>ステーキングを実行</strong>: 接続後、プラットフォーム内で「Stake」「Supply」「Deposit」などの項目を探し、ステーキングしたい仮想通貨と数量を入力します。</li>
+<li><strong>トランザクション（取引）の承認</strong>: MetaMaskが起動し、取引内容（送金額、手数料など）が表示されます。内容を確認し、「確認」ボタンをクリックして承認します。この際にもガス代が発生します。</li>
+<li><strong>ステーキング完了</strong>: トランザクションが承認されれば、ステーキングは完了です。報酬は自動的に発生し、プラットフォーム上で確認できます。</li>
+</ol>
+<p><img alt="## メリット・デメリット比較" src="../images/section_images/defi-staking-metamask-hajimekata_section_2.png" /></p>
+<h2 id="_5">メリット・デメリット比較</h2>
+<p>DeFiステーキングのメリットとデメリットを客観的に比較してみましょう。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">項目</th>
+<th style="text-align: left;">メリット</th>
+<th style="text-align: left;">デメリット</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>利回り</strong></td>
+<td style="text-align: left;">伝統的な銀行預金（年0.001%程度）より高い可能性がある（数%～数十%と変動が大きい）</td>
+<td style="text-align: left;">安定せず、仮想通貨価格の変動により元本割れリスクがある</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>透明性</strong></td>
+<td style="text-align: left;">ブロックチェーン上で取引が公開され、透明性が高い</td>
+<td style="text-align: left;">スマートコントラクトのバグや脆弱性リスクが存在する</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>流動性</strong></td>
+<td style="text-align: left;">リキッドステーキングなど、比較的流動性の高い方法もある</td>
+<td style="text-align: left;">一部のステーキングはロック期間があり、期間中は引き出しできない場合がある</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>操作性</strong></td>
+<td style="text-align: left;">慣れれば直感的に操作可能</td>
+<td style="text-align: left;">初心者には概念やウォレット設定、ガス代の理解が複雑に感じられる</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>セキュリティ</strong></td>
+<td style="text-align: left;">分散型システムのため、単一の運営元に依存しない</td>
+<td style="text-align: left;">ハッキング、詐欺、秘密鍵紛失など自己責任の範囲が広い</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_6">リスクと注意点</h2>
+<p>DeFiステーキングは魅力的な一方で、固有のリスクも多く存在します。特に初心者はこれらのリスクを十分に理解し、対策を講じることが不可欠です。</p>
+<h3 id="1_1">1. 価格変動リスク</h3>
+<p>暗号資産の価格は非常にボラティリティ（価格の変動幅）が高く、短期間で大きく上昇することもあれば、急落することもあります。ステーキングで報酬を得ても、元となる暗号資産の価格が下落すれば、結果として損失を被る可能性があります。過去には、2021年5月や2022年5月のTerra/Luna（テラ/ルナ）の崩壊など、市場全体が大きく下落する暴落事例も存在します。<strong>過去の実績は将来のリターンを保証しません。</strong></p>
+<h3 id="2">2. ハッキング・詐欺リスク</h3>
+<ul>
+<li><strong>フィッシング詐欺</strong>: 偽のDeFiサイトやMetaMaskの偽サイトに誘導され、シードフレーズや秘密鍵を盗まれる手口です。URLが正しいか、常に確認しましょう。</li>
+<li><strong>スマートコントラクトの脆弱性</strong>: DeFiプロトコルはスマートコントラクトというプログラムで動いていますが、このプログラムにバグや脆弱性（ぜいじゃくせい = 弱点）があると、ハッカーに悪用され、預けていた資産が盗まれる可能性があります。セキュリティ監査（プログラムの安全性を専門家がチェックすること）が十分に行われているプロジェクトを選びましょう。</li>
+<li><strong>ラグプル（Rug Pull）</strong>: 開発者がプロジェクトの資金を持ち逃げする詐欺行為です。特に新規の、実績の少ないプロジェクトに多く見られます。</li>
+</ul>
+<h3 id="3">3. 規制リスク</h3>
+<p>暗号資産やDeFiに対する各国の規制はまだ発展途上にあり、今後大きく変化する可能性があります。規制が強化された場合、特定のサービスが利用できなくなったり、予期せぬ税金が課されたりするリスクがあります。日本の金融庁も継続的に動向を監視しています。</p>
+<h3 id="4">4. セキュリティ対策</h3>
+<ul>
+<li><strong>シードフレーズ（秘密鍵）の厳重な管理</strong>: これが最も重要です。紙に書き留め、誰にも見られず、金庫などオフラインの安全な場所に保管してください。デジタルで保存することは絶対に避けてください。</li>
+<li><strong>2段階認証の設定</strong>: 国内取引所では必ず2段階認証（パスワードだけでなく、スマホの認証アプリなどで2段階目の確認を行うこと）を設定し、セキュリティを強化しましょう。</li>
+<li><strong>ハードウェアウォレットの利用</strong>: MetaMaskと連携できるLedger（レジャー）やTrezor（トレザー）などのハードウェアウォレット（仮想通貨をオフラインで管理する物理的なデバイス）を利用することで、ハッキングのリスクを大幅に低減できます。
+    <strong>詳細は: {{internal_link:ハードウェアウォレットの重要性}}</strong></li>
+<li><strong>不審なリンク・ファイルは開かない</strong>: 見知らぬメールやSNSのメッセージから送られてきたリンクはクリックしない、ファイルをダウンロードしないなど、基本的なセキュリティ意識が重要です。</li>
+</ul>
+<h3 id="_7">投資額は余裕資金の範囲内で</h3>
+<p>暗号資産投資は、価格変動リスクが非常に高く、元本を失う可能性もあります。「絶対儲かる」「必ず上がる」「損しない」といった保証は一切ありません。投資は必ず、生活に影響が出ない「余裕資金の範囲内」で行い、最悪の場合失っても生活に支障がない金額に留めるようにしてください。</p>
+<h2 id="_8">まとめ：初心者が今すぐやるべきこと</h2>
+<p>DeFiステーキングは奥深く、魅力的な分野ですが、リスク管理が不可欠です。まずは以下の3つのアクションから始めてみましょう。</p>
+<ol>
+<li><strong>まずは安心・安全な環境作り</strong>: 金融庁に登録されている国内取引所（Coincheck、bitFlyerなど）で口座を開設し、少額の仮想通貨（例: ETHやMATIC）を購入するところからスタートしましょう。</li>
+<li><strong>MetaMaskを正しく理解し、安全に管理する</strong>: MetaMaskをインストールし、<strong>何よりもシードフレーズ（リカバリーフレーズ）のオフライン保管を徹底してください。</strong> これがDeFiへの第一歩であり、最大の防御策です。</li>
+<li><strong>少額から実際に試してみる</strong>: いきなり高額を投じるのではなく、手数料が比較的安価なPolygon（ポリゴン）ネットワークなどを活用し、ごく少額（例: 数千円相当）からDeFiプロトコルに接続し、ステーキングや送金といった操作を実際に体験してみましょう。操作に慣れることが重要です。</li>
+</ol>
+<hr />
+<p><strong>免責事項</strong>: 本記事は情報提供を目的としており、特定の暗号資産の購入・売却を推奨するものではありません。暗号資産の取引にはリスクが伴います。投資判断はご自身の責任で行ってください。投資は自己責任です。余裕資金の範囲内で行いましょう。本記事で言及した過去の実績は将来のリターンを保証しません。</p></div>
+
+            
+
+            <div class="share-buttons">
+                <a class="share-btn share-btn-twitter" href="https://twitter.com/intent/tweet?url=https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-metamask-hajimekata.html&text=DeFiステーキング×MetaMask：初心者向け始め方徹底解説" target="_blank" rel="noopener noreferrer">X でシェア</a>
+                <a class="share-btn share-btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-metamask-hajimekata.html" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="share-btn share-btn-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&url=https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-metamask-hajimekata.html&title=DeFiステーキング×MetaMask：初心者向け始め方徹底解説" target="_blank" rel="noopener noreferrer">はてブ</a>
+                <a class="share-btn share-btn-line" href="https://social-plugins.line.me/lineit/share?url=https://musclelove-777.github.io/crypto-beginner/articles/defi-staking-metamask-hajimekata.html" target="_blank" rel="noopener noreferrer">LINE</a>
+            </div>
+        </article>
+
+        
+    </div>
+</div>
+
+    </main>
+
+    
+    
+
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-section">
+                    <h4>クリプト入門ナビ</h4>
+                    <p class="text-muted" style="font-size:0.85rem;max-width:300px;">仮想通貨・DeFi・NFTを初心者目線で徹底解説。リスク管理から実践トレードまで、失敗しない暗号資産の始め方</p>
+                </div>
+                <div class="footer-section">
+                    <h4>カテゴリ</h4>
+                    <ul class="footer-links"></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>リンク</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://musclelove-777.github.io/crypto-beginner/sitemap.xml">サイトマップ</a></li>
+                        <li><a href="https://musclelove-777.github.io/crypto-beginner/feed.xml">RSSフィード</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">&copy; 2026 クリプト入門ナビ. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        var toggle = document.getElementById('themeToggle');
+        var icon = document.getElementById('themeIcon');
+        var html = document.documentElement;
+        function getStored() { try { return localStorage.getItem('theme'); } catch(e) { return null; } }
+        function setTheme(t) {
+            html.setAttribute('data-theme', t);
+            icon.textContent = t === 'light' ? '\u2600' : '\u263E';
+            try { localStorage.setItem('theme', t); } catch(e) {}
+        }
+        var s = getStored(); if (s) setTheme(s);
+        toggle.addEventListener('click', function() {
+            setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+    })();
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="http"]').forEach(function(l) {
+            if (l.hostname !== window.location.hostname) {
+                l.setAttribute('target', '_blank');
+                l.setAttribute('rel', 'noopener noreferrer');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
