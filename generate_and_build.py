@@ -60,13 +60,8 @@ def run(cfg=None, prm=None):
     # ステップ1: キーワード選定
     logger.info("ステップ1: キーワード選定")
     try:
-        from google import genai
-
-        if not cfg.GEMINI_API_KEY:
-            logger.error("GEMINI_API_KEY が設定されていません")
-            sys.exit(1)
-
-        client = genai.Client(api_key=cfg.GEMINI_API_KEY)
+        from llm import get_llm_client
+        client = get_llm_client(cfg)
 
         # prompts.py のキーワード選定プロンプトを使用
         if prm and hasattr(prm, "build_keyword_prompt"):
