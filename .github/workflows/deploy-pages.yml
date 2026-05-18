@@ -65,7 +65,7 @@ jobs:
           print("site rebuilt")
           PY
       - uses: actions/configure-pages@v5
-      - name: Ensure robots.txt
+      - name: Ensure robots and IndexNow key
         run: |
           mkdir -p output/site
           cat > output/site/robots.txt <<'EOF'
@@ -73,6 +73,8 @@ jobs:
           Allow: /
           Sitemap: https://musclelove-777.github.io/crypto-beginner/sitemap.xml
           EOF
+          cp indexnow-key.txt output/site/indexnow-key.txt
+          cp 805cbd70e0417f333915bb438ea753fb.txt output/site/805cbd70e0417f333915bb438ea753fb.txt
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./output/site
